@@ -7,6 +7,11 @@
 body {
     height: 100vh;
     width: 100vw;
+    background-color: rgb(36, 36, 36)
+}
+
+input {
+    color: black;
 }
 
 .container {
@@ -15,6 +20,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
+    gap: 1vh;
 }
 
 .sidebar {
@@ -72,15 +78,68 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 5px 5px rgb(61, 203, 255);
+    border-left: 1px solid rgb(61, 203, 255);
 }
 
 .main-header p {
     font-size: 5rem;
     font-weight: 900;
     color: rgb(61, 203, 255);
+    text-shadow: 2px 5px 5px rgb(61, 203, 255);
 }
 
 .library {
     background-color: rgb(36, 36, 36);
     grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 20vw));
+    gap: 2vw;
+    padding: 2vh 1vw;
+}
+
+.card {
+    background-color: rgb(53, 53, 53);
+    border: 1px solid rgb(61, 203, 255);
+    border-radius: 30px;
+    box-shadow: 2px 5px 5px rgb(61, 203, 255);
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.title {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.author {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.pages {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.read {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+.title, .author, .pages, .read {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(61, 203, 255);
+    border-radius: 30px;
+}
+
+.book-logo {
+    fill:rgb(61, 203, 255);
+    box-shadow: 2px 5px 5px rgb(61, 203, 255);
+    border: 1px solid rgb(61, 203, 255);
+    border-radius: 30px;
+    height: 20vh;
+    width: 10vw;
+    margin-bottom: 10vh;
+    margin-top: 3vh;
 }
